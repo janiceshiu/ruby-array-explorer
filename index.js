@@ -18,13 +18,13 @@ $(document).ready(function(){
     hideSecondSelectorChildren();
     hideDocumentation();
     $("#second-selector #" + selectedVal ).show();
-    $("#code").html(" # Create an array<br>numbers = [1, 2, 3] #=> [1, 2, 3]")
+    $("#code").html(" # Create an array<br>numbers = [1, 2, 3] #=> [1, 2, 3]");
     highlightCode();
   }
 
   function highlightCode() {
-    $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
-  };
+    $('pre code').each(function(i, e) {hljs.highlightBlock(e);});
+  }
 
   function hideSecondSelectorChildren() {
     $("#second-selector").children().hide();
@@ -33,27 +33,27 @@ $(document).ready(function(){
   // when #second-selector children change
   $("#sel-add").change(function() {
     updateInfo('add', this.value);
-  })
+  });
 
   $("#sel-rm").change(function() {
-    updateInfo('rm', this.value)
-  })
+    updateInfo('rm', this.value);
+  });
 
   $("#sel-find").change(function() {
-    updateInfo('find', this.value)
-  })
+    updateInfo('find', this.value);
+  });
 
   $("#sel-iter").change(function() {
-    updateInfo('iter', this.value)
-  })
+    updateInfo('iter', this.value);
+  });
 
   $("#sel-sort").change(function() {
-    updateInfo('sort', this.value)
-  })
+    updateInfo('sort', this.value);
+  });
 
   $("#sel-other").change(function() {
-    updateInfo('other', this.value)
-  })
+    updateInfo('other', this.value);
+  });
 
   function updateInfo(category, itemName) {
     updateCode(category, itemName);
@@ -77,7 +77,7 @@ $(document).ready(function(){
     elem[1] = '<div>' + selectedItem['desc'] + '</div>';
 
     elem[2] = "<a href='https://ruby-doc.org/core-2.5.0/Array.html#method-i-" + selectedItem['link_name'] + "' id='doc-link' target='_blank'>see the docs →</a>";
-    text = elem.join('');
+    var text = elem.join('');
 
     $('#documentation').html(text);
   }
