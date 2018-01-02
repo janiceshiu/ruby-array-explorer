@@ -12,4 +12,17 @@ $(document).ready(function(){
   function hideSecondSelectorChildren() {
     $("#second-selector").children().hide();
   }
+
+  // when #second-selector children change
+  $("#sel-add").change(function() {
+    updateInfo('add', this.value);
+  })
+
+  function updateInfo(category, itemName) {
+    updateCode(category, itemName);
+  }
+
+  function updateCode(category, itemName) {
+    $("#code").html(explorerData['en'][category][itemName]['text']);
+  }
 });
