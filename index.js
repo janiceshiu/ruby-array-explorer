@@ -35,6 +35,26 @@ $(document).ready(function(){
     updateInfo('add', this.value);
   })
 
+  $("#sel-rm").change(function() {
+    updateInfo('rm', this.value)
+  })
+
+  $("#sel-find").change(function() {
+    updateInfo('find', this.value)
+  })
+
+  $("#sel-iter").change(function() {
+    updateInfo('iter', this.value)
+  })
+
+  $("#sel-sort").change(function() {
+    updateInfo('sort', this.value)
+  })
+
+  $("#sel-other").change(function() {
+    updateInfo('other', this.value)
+  })
+
   function updateInfo(category, itemName) {
     updateCode(category, itemName);
     showDocumentation();
