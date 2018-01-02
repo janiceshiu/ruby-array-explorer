@@ -1,4 +1,15 @@
 $(document).ready(function(){
+  initHide();
+
+  function initHide() {
+    hideSecondSelectorChildren();
+    hideDocumentation();
+  }
+
+  function hideDocumentation() {
+    $("#documentation").hide();
+  }
+
   $("#first-selector").change(function() {
     resetFirstSelector(this.value);
   });
