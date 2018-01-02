@@ -7,7 +7,12 @@ $(document).ready(function(){
     hideSecondSelectorChildren();
     $("#second-selector #" + selectedVal ).show();
     $("#code").html(" # Create an array<br>numbers = [1, 2, 3] #=> [1, 2, 3]")
+    highlightCode();
   }
+
+  function highlightCode() {
+    $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+  };
 
   function hideSecondSelectorChildren() {
     $("#second-selector").children().hide();
@@ -20,6 +25,7 @@ $(document).ready(function(){
 
   function updateInfo(category, itemName) {
     updateCode(category, itemName);
+    highlightCode();
   }
 
   function updateCode(category, itemName) {
