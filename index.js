@@ -16,6 +16,7 @@ $(document).ready(function(){
 
   function resetFirstSelector(selectedVal) {
     hideSecondSelectorChildren();
+    hideDocumentation();
     $("#second-selector #" + selectedVal ).show();
     $("#code").html(" # Create an array<br>numbers = [1, 2, 3] #=> [1, 2, 3]")
     highlightCode();
@@ -36,10 +37,28 @@ $(document).ready(function(){
 
   function updateInfo(category, itemName) {
     updateCode(category, itemName);
+    showDocumentation();
     highlightCode();
+    updateDocumentation(category, itemName);
   }
 
   function updateCode(category, itemName) {
     $("#code").html(explorerData['en'][category][itemName]['text']);
+  }
+
+  function showDocumentation(){
+    $("#documentation").show();
+  }
+
+  function updateDocumentation(category, itemName) {
+    var selectedItem = explorerData['en'][category][itemName];
+    var elem = [];
+    elem[0] = "<h2 id='doc-title'>Array." + selectedItem['name'] + '</h2>';
+    elem[1] = '<div>' + selectedItem['desc'] + '</div>';
+
+    elem[2] = "<a href='https://ruby-doc.org/core-2.5.0/Array.html#method-i-" + selectedItem['link_name'] + "' id='doc-link' target='_blank'>see the docs →</a>";
+    text = elem.join('');
+
+    $('#documentation').html(text);
   }
 });
