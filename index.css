@@ -43,7 +43,41 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "left right";
+    padding-left: 60px;
+    padding-right: 60px;
   }
+}
+
+#left-description {
+  color: #d86f5a;
+  font-style: italic;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+#documentation {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#doc-title {
+  color: #ce371a;
+}
+
+#doc-link {
+  color: #d86f5a;
+  font-style: italic;
+}
+
+#codeblock {
+  white-space: normal;
+}
+
+#code {
+  border: 2px solid #f55e41;
+  border-radius: 4px;
+  white-space: pre-wrap; /* force long lines to break */
 }
 
 footer {
