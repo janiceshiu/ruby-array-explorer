@@ -52,6 +52,52 @@
                 <option value='concat'>this array to other array(s)</option>
               </select>
             </div>
+
+            <div id='rm'>I need to remove:
+              <select id='sel-rm'>
+                <option>...</option>
+                <option value='start'>element(s) from the start of the array</option>
+                <option value="end">element(s) from the end of an array</option>
+                <option value="delete_at">element(s) at a specific location</option>
+                <option value="delete">all occurences of a specific element</option>
+                <option value="compact">nil elements</option>
+                <option value="uniq">duplicate elements</option>
+              </select>
+            </div>
+
+            <div id='find'>I need to find:
+              <select id='sel-find'>
+                <option>...</option>
+                <option value='specific'>an element at a specific position</option>
+                <option value="match">elements that match a condition I create</option>
+                <option value='include'>whether a certain element exists</option>
+                <option value="bsearch">an element that matches a condition in a sorted array</option>
+              </select>
+            </div>
+
+            <div id='iter'>I need to iterate by:
+              <select id='sel-iter'>
+                <option>...</option>
+                <option value='each'>executing a function I will create for each element</option>
+                <option value="map">creating a new array from each element with a function I create</option>
+              </select>
+            </div>
+
+            <div id='sort'>I need to:
+              <select id='sel-sort'>
+                <option>...</option>
+                <option value='reverse'>reverse the array</option>
+                <option value="sort">sort the array's elements</option>
+              </select>
+            </div>
+
+            <div id='other'>I need to:
+              <select id='sel-other'>
+                <option>...</option>
+                <option value='length'>find an array's length</option>
+                <option value="empty">check whether an array is empty</option>
+              </select>
+            </div>
           </div>
 
           <div id='documentation'>
