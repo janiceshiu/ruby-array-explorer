@@ -100,7 +100,7 @@ var explorerDataEn = {
       'name': 'map',
       'link_name': 'map',
       'desc': 'calls the given block once for each element in the array. Returns the original array, whose values have been replaced by the values returned by the block',
-      'text': 'nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.each{|x| x+10} #=> [14, 15, 16]'
+      'text': 'nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.map{|x| x+10} #=> [14, 15, 16]'
     }
   },
   'sort': {
